@@ -1,3 +1,5 @@
+import { createStore } from 'vuex';
+
 import weatherModules from './modules/weather/index.js';
 
 const store = createStore({

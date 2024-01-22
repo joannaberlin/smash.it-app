@@ -1,5 +1,7 @@
 <template>
-	<h2>Welcome to smash.it app!</h2>
+	<div id="container">
+		<router-view></router-view>
+	</div>
 </template>
 
 <script>

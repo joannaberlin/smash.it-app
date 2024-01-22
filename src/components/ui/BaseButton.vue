@@ -19,7 +19,7 @@ export default {
 <style scoped>
 button {
 	text-decoration: none;
-	padding: 0.25rem 0.75rem;
+	padding: 0.1rem 0.5rem;
 	font: inherit;
 	font-weight: bold;
 	background-color: var(--color-action-first);

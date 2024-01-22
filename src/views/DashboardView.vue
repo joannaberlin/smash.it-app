@@ -1,6 +1,10 @@
 <template>
 	<TheHeader></TheHeader>
-	<BaseButton>New Todo <span class="btn-icon">+</span></BaseButton>
+	<main class="container">
+		<BaseCard>
+			<p>Today's weather in Berlin</p>
+		</BaseCard>
+	</main>
 </template>
 
 <script>
@@ -13,16 +17,4 @@ export default {
 };
 </script>
 
-<style scoped>
-h3 {
-	color: var(--color-text-medium);
-}
-
-.btn-icon {
-	font-weight: bold;
-	font-size: 1.5em;
-	background: var(--color-action-second);
-	padding: 3px 12px;
-	border-radius: 50px;
-}
-</style>
+<style scoped></style>

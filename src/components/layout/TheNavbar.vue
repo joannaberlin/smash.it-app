@@ -65,7 +65,7 @@ ul li a {
 }
 
 ul li a:hover {
-	color: var(--color-action-second);
+	color: var(--color-text-medium);
 	transition: var(--transition);
 }
 

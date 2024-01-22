@@ -1,9 +1,21 @@
 <template>
 	<TheHeader></TheHeader>
 	<main class="container">
-		<BaseCard>
-			<p>Today's weather in Berlin</p>
-		</BaseCard>
+		<div class="item">
+			<BaseCard>
+				<h2>Today's weather in Berlin</h2>
+			</BaseCard>
+		</div>
+		<div class="item">
+			<BaseCard>
+				<h2>Random animal fact checker to wake your brain up</h2>
+			</BaseCard>
+		</div>
+		<div class="item">
+			<BaseCard>
+				<h2>Today's sky in Berlin</h2>
+			</BaseCard>
+		</div>
 	</main>
 </template>
 
@@ -17,4 +29,13 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.item h2 {
+	font-size: 0.9em;
+}
+</style>

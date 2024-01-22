@@ -9,7 +9,7 @@
 .header_wrapper {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 1.2em;
+	margin: 1.2em 0;
 }
 .header_wrapper h3 {
 	font-size: 0.9em;

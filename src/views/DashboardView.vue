@@ -1,6 +1,6 @@
 <template>
 	<TheHeader></TheHeader>
-	<h3>Dashboard Page</h3>
+	<BaseButton>New Todo <span class="btn-icon">+</span></BaseButton>
 </template>
 
 <script>
@@ -16,5 +16,13 @@ export default {
 <style scoped>
 h3 {
 	color: var(--color-text-medium);
+}
+
+.btn-icon {
+	font-weight: bold;
+	font-size: 1.5em;
+	background: var(--color-action-second);
+	padding: 3px 12px;
+	border-radius: 50px;
 }
 </style>

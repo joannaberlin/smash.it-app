@@ -1,11 +1,12 @@
 <template>
 	<nav>
 		<div class="logo_wrapper">
-			<img
-				src="../../assets/logo_icon.png"
-				alt="logo image bomb icon"
-				class="icon"
-			/>
+			<router-link to="/"
+				><img
+					src="../../assets/logo_icon.png"
+					alt="logo image bomb icon"
+					class="icon"
+			/></router-link>
 			<router-link to="/">smash.it</router-link>
 		</div>
 		<ul>

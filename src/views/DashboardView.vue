@@ -1,6 +1,6 @@
 <template>
 	<TheHeader></TheHeader>
-	<main class="container">
+	<main id="container">
 		<div class="item">
 			<TemperatureWidget
 				:temp="weatherData.temp"
@@ -42,7 +42,6 @@ export default {
 	},
 	computed: {
 		weatherData() {
-			console.log(this.$store.getters['weather/data']);
 			return this.$store.getters['weather/data'];
 		},
 		questionData() {
@@ -69,8 +68,19 @@ export default {
 </script>
 
 <style scoped>
-.container {
+#container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+@media (min-width: 1200px) {
+	#container {
+		width: 85vw;
+		min-height: 80vh;
+		border-radius: 30px;
+		padding: 0.6em;
+		box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+		background: var(--color-background-dark);
+	}
 }
 </style>

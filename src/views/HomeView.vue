@@ -1,5 +1,5 @@
 <template>
-	<h2>Home Page</h2>
+	<div id="container"><h2>Home Page</h2></div>
 </template>
 
 <style scoped>

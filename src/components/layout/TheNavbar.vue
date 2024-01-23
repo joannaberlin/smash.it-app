@@ -84,4 +84,44 @@ nav {
 	width: 100%;
 	margin: 0;
 }
+
+@media (min-width: 1200px) {
+	nav {
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: end;
+		height: 95vh;
+		width: 15vw;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	ul {
+		flex-direction: column;
+	}
+
+	ul li {
+		margin-top: 2.5em;
+		font-size: 1.2em;
+	}
+
+	ul li a.router-link-active {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		padding: 10px 30px;
+	}
+
+	.avatar_wrapper {
+		padding: 0 60px 100px;
+		margin-bottom: 150px;
+		background: var(--color-background-medium);
+		border-top-left-radius: 30px;
+		border-bottom-left-radius: 30px;
+	}
+
+	.logo_wrapper {
+		margin-right: 50px;
+	}
+}
 </style>

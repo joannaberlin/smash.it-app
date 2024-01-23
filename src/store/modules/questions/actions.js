@@ -10,12 +10,11 @@ export default {
 		}
 		const randomNum = Math.floor(Math.random() * 10 + 1);
 		const randomData = responseData.results[randomNum];
-		console.log(randomData);
+
 		const data = {
 			question: randomData.question,
 			answer: randomData.correct_answer,
 		};
-		console.log(data);
 		context.commit('setRandomQuestion', data);
 	},
 };

@@ -42,6 +42,7 @@ h3 mark {
 .text-icon_wrapper img {
 	max-width: 100px;
 	object-fit: cover;
+	margin-left: 1em;
 }
 
 .text_container p:first-child {

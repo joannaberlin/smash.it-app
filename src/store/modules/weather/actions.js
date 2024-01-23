@@ -10,13 +10,12 @@ export default {
 			const error = new Error(responseData.message || 'Failed to fetch!');
 			throw error;
 		}
-		console.log(responseData);
 		const temperature = responseData.main.temp.toFixed();
 		const iconSrc = responseData.weather[0].icon;
 		const feelTemp = responseData.main.feels_like.toFixed();
 		const clouds = responseData.clouds.all;
 		const cloudsDesc = responseData.weather[0].description;
-		console.log(cloudsDesc);
+
 		const data = {
 			temp: temperature,
 			icon: iconSrc,
@@ -24,7 +23,6 @@ export default {
 			clouds: clouds,
 			cloudsDesc: cloudsDesc,
 		};
-		console.log(data);
 		context.commit('setWeatherInfo', data);
 	},
 };

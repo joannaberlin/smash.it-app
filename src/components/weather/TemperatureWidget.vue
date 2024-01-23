@@ -1,15 +1,17 @@
 <template>
 	<BaseCard>
-		<h2>Today's weather in Berlin</h2>
-		<div class="text-icon_wrapper">
-			<div class="text_container">
-				<p>{{ temp }} °C</p>
-				<h3><mark>It feels like</mark></h3>
-				<p>{{ feelTemp }} °C</p>
+		<div>
+			<h2>Today's weather in Berlin</h2>
+			<div class="text-icon_wrapper">
+				<div class="text_container">
+					<p>{{ temp }} °C</p>
+					<h3><mark>It feels like</mark></h3>
+					<p>{{ feelTemp }} °C</p>
+				</div>
+				<img
+					:src="'https://openweathermap.org/img/wn/' + `${icon}` + '@2x.png'"
+				/>
 			</div>
-			<img
-				:src="'https://openweathermap.org/img/wn/' + `${icon}` + '@2x.png'"
-			/>
 		</div>
 	</BaseCard>
 </template>

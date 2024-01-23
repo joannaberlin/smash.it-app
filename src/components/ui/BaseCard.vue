@@ -13,5 +13,8 @@
 	max-width: 30rem;
 	background-color: var(--color-background-medium);
 	height: 12em;
+	display: flex;
+	align-items: center;
+	justify-items: center;
 }
 </style>

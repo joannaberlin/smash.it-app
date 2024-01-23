@@ -1,40 +1,42 @@
 <template>
 	<BaseCard>
-		<h2>Today's sky in Berlin</h2>
-		<div class="text-icon_wrapper">
-			<div class="text_wrapper">
-				<h3>
-					<mark>{{ cloudsDesc }}</mark>
-				</h3>
-				<p>
-					<span>{{ clouds }}%</span>
-				</p>
-			</div>
-			<div class="icon_wrapper">
-				<i
-					v-if="noCloudy"
-					class="em em-sunglasses"
-					aria-role="presentation"
-					aria-label="face with sunglasses"
-				></i>
-				<i
-					v-else-if="littleCloudy"
-					class="em em-smirk"
-					aria-role="presentation"
-					aria-label="smirk face"
-				></i>
-				<i
-					v-else-if="cloudy"
-					class="em em-face_with_rolling_eyes"
-					aria-role="presentation"
-					aria-label="face with rolling eyes"
-				></i>
-				<i
-					v-else
-					class="em em-pleading_face"
-					aria-role="presentation"
-					aria-label="pleading face"
-				></i>
+		<div>
+			<h2>Today's sky in Berlin</h2>
+			<div class="text-icon_wrapper">
+				<div class="text_wrapper">
+					<h3>
+						<mark>{{ cloudsDesc }}</mark>
+					</h3>
+					<p>
+						<span>{{ clouds }}%</span>
+					</p>
+				</div>
+				<div class="icon_wrapper">
+					<i
+						v-if="noCloudy"
+						class="em em-sunglasses"
+						aria-role="presentation"
+						aria-label="face with sunglasses"
+					></i>
+					<i
+						v-else-if="littleCloudy"
+						class="em em-smirk"
+						aria-role="presentation"
+						aria-label="smirk face"
+					></i>
+					<i
+						v-else-if="cloudy"
+						class="em em-face_with_rolling_eyes"
+						aria-role="presentation"
+						aria-label="face with rolling eyes"
+					></i>
+					<i
+						v-else
+						class="em em-pleading_face"
+						aria-role="presentation"
+						aria-label="pleading face"
+					></i>
+				</div>
 			</div>
 		</div>
 	</BaseCard>

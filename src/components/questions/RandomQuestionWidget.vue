@@ -1,8 +1,10 @@
 <template>
 	<BaseCard>
-		<div>
+		<div class="container">
 			<h2>Random animal fact checker to wake your brain up</h2>
-			<p>{{ question }}</p>
+			<p>
+				<mark>{{ question }}</mark>
+			</p>
 			<BaseButton @click="checkAnswer()" mode="outline"
 				><p v-if="!isAnswered">?</p>
 				<p v-else-if="isAnswered">{{ answer }}</p></BaseButton
@@ -30,6 +32,13 @@ export default {
 <style scoped>
 h2 {
 	font-size: 0.9em;
+	margin-bottom: 1em;
+}
+
+.container p:nth-child(2) mark {
+	font-size: 0.9em;
+	font-weight: bold;
+	background-color: var(--color-text-light);
 }
 
 button {

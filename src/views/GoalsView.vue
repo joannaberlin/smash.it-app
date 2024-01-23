@@ -1,5 +1,7 @@
 <template>
-	<h3>Goals Page</h3>
+	<BaseCardDesktop>
+		<h3>Goals Page</h3>
+	</BaseCardDesktop>
 </template>
 
 <style scoped>

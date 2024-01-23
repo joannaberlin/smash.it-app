@@ -1,5 +1,7 @@
 <template>
-	<div id="container"><h2>Home Page</h2></div>
+	<BaseCardDesktop>
+		<h2>Home Page</h2>
+	</BaseCardDesktop>
 </template>
 
 <style scoped>

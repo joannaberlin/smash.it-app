@@ -1,26 +1,28 @@
 <template>
 	<TheHeader></TheHeader>
-	<main id="container">
-		<div class="item">
-			<TemperatureWidget
-				:temp="weatherData.temp"
-				:feelTemp="weatherData.feelTemp"
-				:icon="weatherData.icon"
-			/>
-		</div>
-		<div class="item">
-			<RandomQuestionWidget
-				:question="questionData.question"
-				:answer="questionData.answer"
-			/>
-		</div>
-		<div class="item">
-			<CloudsWidget
-				:clouds="weatherData.clouds"
-				:cloudsDesc="weatherData.cloudsDesc"
-			/>
-		</div>
-	</main>
+	<BaseCardDesktop>
+		<main id="container">
+			<div class="item">
+				<TemperatureWidget
+					:temp="weatherData.temp"
+					:feelTemp="weatherData.feelTemp"
+					:icon="weatherData.icon"
+				/>
+			</div>
+			<div class="item">
+				<RandomQuestionWidget
+					:question="questionData.question"
+					:answer="questionData.answer"
+				/>
+			</div>
+			<div class="item">
+				<CloudsWidget
+					:clouds="weatherData.clouds"
+					:cloudsDesc="weatherData.cloudsDesc"
+				/>
+			</div>
+		</main>
+	</BaseCardDesktop>
 </template>
 
 <script>
@@ -73,7 +75,7 @@ export default {
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
 	#container {
 		width: 85vw;
 		min-height: 80vh;
@@ -82,5 +84,5 @@ export default {
 		box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 		background: var(--color-background-dark);
 	}
-}
+} */
 </style>

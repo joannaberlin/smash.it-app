@@ -14,9 +14,10 @@
 			</BaseCard>
 		</div>
 		<div class="item">
-			<BaseCard>
-				<h2>Today's sky in Berlin</h2>
-			</BaseCard>
+			<CloudsWidget
+				:clouds="weatherData.clouds"
+				:cloudsDesc="weatherData.cloudsDesc"
+			/>
 		</div>
 	</main>
 </template>
@@ -24,12 +25,13 @@
 <script>
 import TheHeader from '@/components/layout/TheHeader.vue';
 import TemperatureWidget from '@/components/weather/TemperatureWidget.vue';
-import weather from '@/store/modules/weather';
+import CloudsWidget from '@/components/weather/CloudsWidget.vue';
 
 export default {
 	components: {
 		TheHeader,
 		TemperatureWidget,
+		CloudsWidget,
 	},
 	created() {
 		this.loadWeatherData();

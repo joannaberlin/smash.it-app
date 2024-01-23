@@ -14,8 +14,16 @@ export default {
 		const temperature = responseData.main.temp.toFixed();
 		const iconSrc = responseData.weather[0].icon;
 		const feelTemp = responseData.main.feels_like.toFixed();
-		console.log(feelTemp);
-		const data = { temp: temperature, icon: iconSrc, feelTemp: feelTemp };
+		const clouds = responseData.clouds.all;
+		const cloudsDesc = responseData.weather[0].description;
+		console.log(cloudsDesc);
+		const data = {
+			temp: temperature,
+			icon: iconSrc,
+			feelTemp: feelTemp,
+			clouds: clouds,
+			cloudsDesc: cloudsDesc,
+		};
 		console.log(data);
 		context.commit('setWeatherInfo', data);
 	},

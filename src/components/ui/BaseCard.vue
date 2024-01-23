@@ -12,5 +12,6 @@
 	margin: 0.5rem auto;
 	max-width: 30rem;
 	background-color: var(--color-background-medium);
+	height: 12em;
 }
 </style>

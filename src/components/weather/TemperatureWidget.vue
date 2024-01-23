@@ -4,7 +4,7 @@
 		<div class="text-icon_wrapper">
 			<div class="text_container">
 				<p>{{ temp }} °C</p>
-				<h2>It feels like</h2>
+				<h3><mark>It feels like</mark></h3>
 				<p>{{ feelTemp }} °C</p>
 			</div>
 			<img
@@ -25,18 +25,27 @@ h2 {
 	font-size: 0.9em;
 }
 
+h3 mark {
+	font-size: 0.9em;
+	background-color: var(--color-text-medium);
+	color: var(--color-background-medium);
+	font-weight: bold;
+}
+
 .text-icon_wrapper {
 	display: flex;
 	justify-content: space-between;
 }
 
 .text-icon_wrapper img {
-	max-width: 200px;
+	max-width: 100px;
+	object-fit: cover;
 }
 
 .text_container p:first-child {
 	font-size: 2em;
 	font-weight: bold;
+	margin-top: 0.5em;
 }
 
 .text_container p:nth-child(3) {

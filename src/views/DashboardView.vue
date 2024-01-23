@@ -2,23 +2,11 @@
 	<TheHeader></TheHeader>
 	<main class="container">
 		<div class="item">
-			<BaseCard>
-				<h2>Today's weather in Berlin</h2>
-				<div class="text-icon_wrapper">
-					<div class="text_container">
-						<p>{{ weatherData.temp }} °C</p>
-						<h2>It feels like</h2>
-						<p>{{ weatherData.feelTemp }} °C</p>
-					</div>
-					<img
-						:src="
-							'https://openweathermap.org/img/wn/' +
-							`${weatherData.icon}` +
-							'@2x.png'
-						"
-					/>
-				</div>
-			</BaseCard>
+			<TemperatureWidget
+				:temp="weatherData.temp"
+				:feelTemp="weatherData.feelTemp"
+				:icon="weatherData.icon"
+			/>
 		</div>
 		<div class="item">
 			<BaseCard>
@@ -35,10 +23,13 @@
 
 <script>
 import TheHeader from '@/components/layout/TheHeader.vue';
+import TemperatureWidget from '@/components/weather/TemperatureWidget.vue';
+import weather from '@/store/modules/weather';
 
 export default {
 	components: {
 		TheHeader,
+		TemperatureWidget,
 	},
 	created() {
 		this.loadWeatherData();
@@ -65,27 +56,5 @@ export default {
 .container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.item h2 {
-	font-size: 0.9em;
-}
-
-.text-icon_wrapper {
-	display: flex;
-	justify-content: space-between;
-}
-
-.text-icon_wrapper img {
-	max-width: 200px;
-}
-
-.text_container p:first-child {
-	font-size: 2em;
-	font-weight: bold;
-}
-
-.text_container p:nth-child(3) {
-	font-size: 1.5em;
 }
 </style>

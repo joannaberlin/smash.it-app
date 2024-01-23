@@ -45,19 +45,14 @@
 <script>
 export default {
 	props: ['clouds', 'cloudsDesc'],
-	data() {
-		return {
-			cloudsPercent: this.clouds,
-		};
-	},
 	computed: {
 		noCloudy() {
-			if (this.cloudsPercent >= 0 && this.cloudsPercent <= 20) {
+			if (this.clouds >= 0 && this.clouds <= 20) {
 				return true;
 			}
 		},
 		littleCloudy() {
-			if (this.cloudsPercent > 20 && this.cloudsPercent < 51) {
+			if (this.clouds > 20 && this.clouds < 51) {
 				return true;
 			}
 		},

@@ -23,6 +23,7 @@ export default {
 			clouds: clouds,
 			cloudsDesc: cloudsDesc,
 		};
+		console.log(data);
 		context.commit('setWeatherInfo', data);
 	},
 };

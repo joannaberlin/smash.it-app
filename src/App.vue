@@ -2,6 +2,7 @@
 	<div id="container">
 		<TheNavbar></TheNavbar>
 		<router-view></router-view>
+		<!-- <p>{{ weatherData.temp }}</p> -->
 	</div>
 </template>
 
@@ -14,6 +15,12 @@ export default {
 	},
 	created() {
 		this.loadWeatherData();
+	},
+	computed: {
+		weatherData() {
+			// console.log(this.$store.getters['weather/data']);
+			return this.$store.getters['weather/data'];
+		},
 	},
 	methods: {
 		async loadWeatherData() {

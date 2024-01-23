@@ -1,7 +1,6 @@
 export default {
 	async loadWeatherData(context) {
 		const apiKey = import.meta.env.VITE_API_KEY;
-		console.log(apiKey);
 
 		const response = await fetch(
 			`https://api.openweathermap.org/data/2.5/weather?q=Berlin,de&units=metric&APPID=${apiKey}`
@@ -12,8 +11,11 @@ export default {
 			throw error;
 		}
 		console.log(responseData);
-		const temperature = Math.floor(responseData.main.temp).toString();
-		const data = { temp: temperature };
+		const temperature = responseData.main.temp.toFixed();
+		const iconSrc = responseData.weather[0].icon;
+		const feelTemp = responseData.main.feels_like.toFixed();
+		console.log(feelTemp);
+		const data = { temp: temperature, icon: iconSrc, feelTemp: feelTemp };
 		console.log(data);
 		context.commit('setWeatherInfo', data);
 	},

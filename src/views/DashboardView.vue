@@ -4,6 +4,16 @@
 		<div class="item">
 			<BaseCard>
 				<h2>Today's weather in Berlin</h2>
+				<p>{{ weatherData.temp }} °C</p>
+				<img
+					:src="
+						'https://openweathermap.org/img/wn/' +
+						`${weatherData.icon}` +
+						'@2x.png'
+					"
+				/>
+				<h2>It feels like</h2>
+				<p>{{ weatherData.feelTemp }} °C</p>
 			</BaseCard>
 		</div>
 		<div class="item">
@@ -25,6 +35,24 @@ import TheHeader from '@/components/layout/TheHeader.vue';
 export default {
 	components: {
 		TheHeader,
+	},
+	created() {
+		this.loadWeatherData();
+	},
+	computed: {
+		weatherData() {
+			console.log(this.$store.getters['weather/data']);
+			return this.$store.getters['weather/data'];
+		},
+	},
+	methods: {
+		async loadWeatherData() {
+			try {
+				await this.$store.dispatch('weather/loadWeatherData');
+			} catch (error) {
+				this.error = error.message || 'Something went wrong!';
+			}
+		},
 	},
 };
 </script>

@@ -9,9 +9,10 @@
 			/>
 		</div>
 		<div class="item">
-			<BaseCard>
-				<h2>Random animal fact checker to wake your brain up</h2>
-			</BaseCard>
+			<RandomQuestionWidget
+				:question="questionData.question"
+				:answer="questionData.answer"
+			/>
 		</div>
 		<div class="item">
 			<CloudsWidget
@@ -26,26 +27,39 @@
 import TheHeader from '@/components/layout/TheHeader.vue';
 import TemperatureWidget from '@/components/weather/TemperatureWidget.vue';
 import CloudsWidget from '@/components/weather/CloudsWidget.vue';
+import RandomQuestionWidget from '@/components/questions/RandomQuestionWidget.vue';
 
 export default {
 	components: {
 		TheHeader,
 		TemperatureWidget,
 		CloudsWidget,
+		RandomQuestionWidget,
 	},
 	created() {
 		this.loadWeatherData();
+		this.loadQuestions();
 	},
 	computed: {
 		weatherData() {
 			console.log(this.$store.getters['weather/data']);
 			return this.$store.getters['weather/data'];
 		},
+		questionData() {
+			return this.$store.getters['questions/question'];
+		},
 	},
 	methods: {
 		async loadWeatherData() {
 			try {
 				await this.$store.dispatch('weather/loadWeatherData');
+			} catch (error) {
+				this.error = error.message || 'Something went wrong!';
+			}
+		},
+		async loadQuestions() {
+			try {
+				await this.$store.dispatch('questions/loadQuestions');
 			} catch (error) {
 				this.error = error.message || 'Something went wrong!';
 			}

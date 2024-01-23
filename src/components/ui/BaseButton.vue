@@ -29,6 +29,7 @@ button {
 	border-radius: 30px;
 	margin-right: 0.5rem;
 	display: inline-block;
+	min-width: 70px;
 }
 
 button:hover,
@@ -37,6 +38,6 @@ button:active {
 }
 
 .outline {
-	border: 2px solid var(--color-background-dark);
+	border: 2px solid var(--color-action-second);
 }
 </style>

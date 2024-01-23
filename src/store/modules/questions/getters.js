@@ -1,1 +1,5 @@
-export default {};
+export default {
+	question(state) {
+		return state.question;
+	},
+};

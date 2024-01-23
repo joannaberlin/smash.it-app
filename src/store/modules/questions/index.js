@@ -6,7 +6,10 @@ export default {
 	namespaced: true,
 	state() {
 		return {
-			questions: [],
+			question: {
+				question: 'A bear does NOT defecate during hibernation.',
+				answer: 'True',
+			},
 		};
 	},
 	mutations,

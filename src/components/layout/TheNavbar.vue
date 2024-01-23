@@ -19,6 +19,11 @@
 				src="../../assets/batman_avatar_icon.png"
 				alt="avatar icon - batman"
 			/>
+			<div class="text_wrapper">
+				<p>Bruce Wayne</p>
+				<p>"Hard choices, easy life. Easy choices, hard life."</p>
+				<p>Jerzy Gregorek</p>
+			</div>
 		</div>
 	</nav>
 </template>
@@ -47,6 +52,10 @@
 
 .avatar_wrapper img {
 	height: 30px;
+}
+
+.text_wrapper {
+	display: none;
 }
 
 ul {
@@ -113,15 +122,46 @@ nav {
 	}
 
 	.avatar_wrapper {
-		padding: 0 60px 100px;
+		/* padding: 0 70px 100px; */
 		margin-bottom: 150px;
 		background: var(--color-background-medium);
 		border-top-left-radius: 30px;
 		border-bottom-left-radius: 30px;
 	}
 
+	.avatar_wrapper img {
+		height: 50px;
+		margin-left: -30px;
+		margin-bottom: -90px;
+	}
+
 	.logo_wrapper {
-		margin-right: 50px;
+		margin: 20px 50px 0 0;
+	}
+
+	.text_wrapper {
+		display: flex;
+		flex-direction: column;
+		width: 10em;
+		height: 10em;
+		padding: 0 20px 10px 35px;
+	}
+
+	.text_wrapper p:first-child {
+		padding: 0;
+	}
+
+	.text_wrapper p:nth-child(2) {
+		color: var(--color-text-medium);
+	}
+
+	.text_wrapper p:nth-child(3) {
+		font-size: 0.7em;
+	}
+
+	.text_wrapper p {
+		font-size: 0.8em;
+		padding-top: 1em;
 	}
 }
 </style>

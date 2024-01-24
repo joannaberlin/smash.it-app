@@ -8,6 +8,7 @@ import BaseButton from './components/ui/BaseButton.vue';
 import BaseCard from './components/ui/BaseCard.vue';
 import BaseCardDesktop from './components/ui/BaseCardDesktop.vue';
 import BaseCurrentDate from './components/ui/BaseCurrentDate.vue';
+import BaseBadge from './components/ui/BaseBadge.vue';
 
 const app = createApp(App);
 
@@ -18,5 +19,6 @@ app.component('BaseButton', BaseButton);
 app.component('BaseCard', BaseCard);
 app.component('BaseCardDesktop', BaseCardDesktop);
 app.component('BaseCurrentDate', BaseCurrentDate);
+app.component('BaseBadge', BaseBadge);
 
 app.mount('#app');

@@ -1,7 +1,7 @@
 <template>
 	<div class="todos_wrapper">
 		<div class="text_wrapper">
-			<h2>Your ToDos</h2>
+			<h2><mark>Your ToDos</mark></h2>
 			<ul>
 				<TodoItem
 					v-for="todo in todos"
@@ -41,5 +41,16 @@ export default {
 	display: flex;
 	align-items: flex-start;
 	justify-items: center;
+}
+
+h2 mark {
+	background: var(--color-text-light);
+	font-weight: bold;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 </style>

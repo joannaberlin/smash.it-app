@@ -8,12 +8,29 @@ export default {
 			const error = new Error(responseData.message || 'Failed to fetch!');
 			throw error;
 		}
-		const randomNum = Math.floor(Math.random() * 10 + 1);
-		const randomData = responseData.results[randomNum];
+		const questionsAndAnswers = responseData.results.map((item) => {
+			return { question: item.question, answer: item.correct_answer };
+		});
+		const cleanedData = questionsAndAnswers.map((item) => {
+			return {
+				question: item.question
+					.split(' ')
+					.map((word) => {
+						if (word.includes('&')) {
+							return word.slice(0, word.indexOf('&')) + "'s";
+						}
+						return word;
+					})
+					.join(' '),
+				answer: item.answer,
+			};
+		});
+		const randomNum = Math.floor(Math.random() * 9 + 1);
+		const randomData = cleanedData[randomNum];
 
 		const data = {
 			question: randomData.question,
-			answer: randomData.correct_answer,
+			answer: randomData.answer,
 		};
 		context.commit('setRandomQuestion', data);
 	},

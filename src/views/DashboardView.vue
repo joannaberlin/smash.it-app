@@ -76,6 +76,9 @@ export default {
 				this.error = error.message || 'Something went wrong!';
 			}
 		},
+		handleError() {
+			this.error = null;
+		},
 	},
 };
 </script>

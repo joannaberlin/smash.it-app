@@ -6,7 +6,6 @@
 				<TemperatureWidget
 					:temp="weatherData.temp"
 					:feelTemp="weatherData.feelTemp"
-					:icon="weatherData.icon"
 				/>
 			</div>
 			<div class="item">
@@ -19,6 +18,7 @@
 				<CloudsWidget
 					:clouds="weatherData.clouds"
 					:cloudsDesc="weatherData.cloudsDesc"
+					:icon="weatherData.icon"
 				/>
 			</div>
 		</main>

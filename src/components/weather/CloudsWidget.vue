@@ -8,7 +8,7 @@
 						<mark>{{ cloudsDesc }}</mark>
 					</h3>
 					<p>
-						<span>{{ clouds }}%</span>
+						<span>{{ clouds }}%</span> Clouds
 					</p>
 				</div>
 				<div class="icon_wrapper">
@@ -37,6 +37,9 @@
 						aria-label="pleading face"
 					></i>
 				</div>
+				<img
+					:src="'https://openweathermap.org/img/wn/' + `${icon}` + '@2x.png'"
+				/>
 			</div>
 		</div>
 	</BaseCard>
@@ -44,7 +47,7 @@
 
 <script>
 export default {
-	props: ['clouds', 'cloudsDesc'],
+	props: ['clouds', 'cloudsDesc', 'icon'],
 	computed: {
 		noCloudy() {
 			if (this.clouds >= 0 && this.clouds <= 20) {
@@ -97,7 +100,13 @@ h3 mark {
 	align-items: flex-start;
 }
 
+.text-icon_wrapper img {
+	max-width: 130px;
+	object-fit: cover;
+	margin-left: 1.8em;
+}
+
 i {
-	margin: 1.4em 0 0 1.1em;
+	margin: 4em 0 0 1.1em;
 }
 </style>

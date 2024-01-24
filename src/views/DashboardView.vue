@@ -21,6 +21,7 @@
 					:icon="weatherData.icon"
 				/>
 			</div>
+			<div class="item item-4"><TodosList></TodosList></div>
 		</main>
 	</BaseCardDesktop>
 </template>
@@ -30,6 +31,7 @@ import TheHeader from '@/components/layout/TheHeader.vue';
 import TemperatureWidget from '@/components/weather/TemperatureWidget.vue';
 import CloudsWidget from '@/components/weather/CloudsWidget.vue';
 import RandomQuestionWidget from '@/components/questions/RandomQuestionWidget.vue';
+import TodosList from '@/components/todos/TodosList.vue';
 
 export default {
 	components: {
@@ -37,6 +39,7 @@ export default {
 		TemperatureWidget,
 		CloudsWidget,
 		RandomQuestionWidget,
+		TodosList,
 	},
 	created() {
 		this.loadWeatherData();
@@ -73,5 +76,15 @@ export default {
 #container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+@media (min-width: 720px) {
+	.item-4 {
+		grid-column-start: 2;
+		grid-column-end: 2;
+		grid-row-start: 2;
+		grid-row-end: 3;
+		min-height: auto;
+	}
 }
 </style>

@@ -5,8 +5,8 @@
 			<p>
 				<mark>{{ question }}</mark>
 			</p>
-			<BaseButton @click="checkAnswer()" mode="outline"
-				><p v-if="!isAnswered">?</p>
+			<BaseButton @click="checkAnswer()" mode="outline">
+				<p v-if="!isAnswered">?</p>
 				<p v-else-if="isAnswered">{{ answer }}</p></BaseButton
 			>
 		</div>

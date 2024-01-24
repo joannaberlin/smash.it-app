@@ -32,9 +32,9 @@
 					></i>
 					<i
 						v-else
-						class="em em-pleading_face"
+						class="em em-woozy_face"
 						aria-role="presentation"
-						aria-label="pleading face"
+						aria-label="woozy face"
 					></i>
 				</div>
 				<img

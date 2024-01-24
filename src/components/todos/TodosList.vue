@@ -48,6 +48,7 @@ export default {
 h2 mark {
 	background: var(--color-text-light);
 	font-weight: bold;
+	color: var(--color-background-dark);
 }
 
 ul {

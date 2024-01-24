@@ -11,7 +11,7 @@
 	padding: 1rem;
 	margin: 0.5rem 0.2em;
 	max-width: 30rem;
-	background-color: var(--color-background-medium);
+	background-color: var(--color-background-dark);
 	height: 13em;
 	display: flex;
 	align-items: center;

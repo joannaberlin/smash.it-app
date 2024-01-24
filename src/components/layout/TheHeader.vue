@@ -1,6 +1,7 @@
 <template>
 	<div class="header_wrapper">
 		<h3>Good morning, <span class="name">Bruce</span>!</h3>
+		<BaseCurrentDate></BaseCurrentDate>
 		<BaseButton>New Todo <span class="btn-icon">+</span></BaseButton>
 	</div>
 </template>
@@ -29,5 +30,15 @@
 	background: var(--color-action-second);
 	padding: 3px 12px;
 	border-radius: 50px;
+}
+
+@media (min-width: 1200px) {
+	.header_wrapper {
+		background-color: var(--color-background-medium);
+		box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+		padding: 1.2em 2.5em;
+		margin: 1em 3em;
+		border-radius: 30px;
+	}
 }
 </style>

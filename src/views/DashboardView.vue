@@ -1,4 +1,7 @@
 <template>
+	<BaseDialog :show="!!error" title="An error occured!" @close="handleError">
+		<p>{{ error }}</p></BaseDialog
+	>
 	<TheHeader></TheHeader>
 	<BaseCardDesktop>
 		<main id="container">
@@ -34,6 +37,11 @@ import RandomQuestionWidget from '@/components/questions/RandomQuestionWidget.vu
 import TodosList from '@/components/todos/TodosList.vue';
 
 export default {
+	data() {
+		return {
+			error: null,
+		};
+	},
 	components: {
 		TheHeader,
 		TemperatureWidget,

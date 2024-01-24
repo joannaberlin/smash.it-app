@@ -74,15 +74,4 @@ export default {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-
-/* @media (min-width: 1200px) {
-	#container {
-		width: 85vw;
-		min-height: 80vh;
-		border-radius: 30px;
-		padding: 0.6em;
-		box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-		background: var(--color-background-dark);
-	}
-} */
 </style>

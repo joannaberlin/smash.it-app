@@ -1,8 +1,10 @@
 <template>
 	<div class="header_wrapper">
 		<h3>Good morning, <span class="name">Bruce</span>!</h3>
-		<BaseCurrentDate></BaseCurrentDate>
-		<BaseButton>New Todo <span class="btn-icon">+</span></BaseButton>
+		<div class="date-btn_wrapper">
+			<BaseCurrentDate></BaseCurrentDate>
+			<BaseButton>New Todo <span class="btn-icon">+</span></BaseButton>
+		</div>
 	</div>
 </template>
 
@@ -39,6 +41,10 @@
 		padding: 1.2em 2.5em;
 		margin: 1em 3em;
 		border-radius: 30px;
+	}
+
+	.date-btn_wrapper {
+		display: flex;
 	}
 }
 </style>

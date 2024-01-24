@@ -1,7 +1,6 @@
 <template>
 	<div class="date_wrapper">
 		<p>{{ currentDay }}</p>
-		<p>{{ currentTime }}</p>
 	</div>
 </template>
 
@@ -12,12 +11,6 @@ export default {
 			const date = new Date().toLocaleString();
 			for (let item of date) {
 				if (item === ',') return date.slice(0, date.indexOf(item));
-			}
-		},
-		currentTime() {
-			const date = new Date().toLocaleString();
-			for (let item of date) {
-				if (item === ',') return date.slice(date.indexOf(item) + 1);
 			}
 		},
 	},
@@ -32,6 +25,13 @@ export default {
 @media (min-width: 1200px) {
 	.date_wrapper {
 		display: flex;
+		align-items: center;
+	}
+
+	.date_wrapper p {
+		color: var(--color-text-medium);
+		font-size: 0.9em;
+		margin-right: 2em;
 	}
 }
 </style>

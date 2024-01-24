@@ -8,6 +8,8 @@
 					:key="todo.id"
 					:id="todo.id"
 					:todo="todo.todo"
+					:type="todo.type"
+					:text="todo.duration"
 				></TodoItem>
 			</ul>
 		</div>

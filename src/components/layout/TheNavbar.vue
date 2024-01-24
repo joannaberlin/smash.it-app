@@ -20,13 +20,23 @@
 				alt="avatar icon - batman"
 			/>
 			<div class="text_wrapper">
-				<p>Bruce Wayne</p>
+				<p>{{ userName }}</p>
 				<p>"Hard choices, easy life. Easy choices, hard life."</p>
 				<p>Jerzy Gregorek</p>
 			</div>
 		</div>
 	</nav>
 </template>
+
+<script>
+export default {
+	computed: {
+		userName() {
+			return this.$store.getters.userName;
+		},
+	},
+};
+</script>
 
 <style scoped>
 .icon {

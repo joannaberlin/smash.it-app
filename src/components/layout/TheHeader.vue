@@ -1,12 +1,25 @@
 <template>
 	<div class="header_wrapper">
-		<h3>Good morning, <span class="name">Bruce</span>!</h3>
+		<h3>
+			Good morning, <span class="name">{{ userName }}</span
+			>!
+		</h3>
 		<div class="date-btn_wrapper">
 			<BaseCurrentDate></BaseCurrentDate>
 			<BaseButton>New Todo <span class="btn-icon">+</span></BaseButton>
 		</div>
 	</div>
 </template>
+
+<script>
+export default {
+	computed: {
+		userName() {
+			return this.$store.getters.userName;
+		},
+	},
+};
+</script>
 
 <style scoped>
 .header_wrapper {
@@ -32,6 +45,12 @@
 	background: var(--color-action-second);
 	padding: 3px 12px;
 	border-radius: 50px;
+}
+
+@media (min-width: 720px) {
+	.header_wrapper h3 {
+		font-size: 1.3em;
+	}
 }
 
 @media (min-width: 1200px) {

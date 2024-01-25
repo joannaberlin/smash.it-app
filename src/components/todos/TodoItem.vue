@@ -2,7 +2,7 @@
 	<li>
 		<p><span>+</span>{{ todo }}</p>
 		<BaseBadge :duration="duration" :text="text"></BaseBadge>
-		<BaseButton @click="handleDelete"
+		<BaseButton @click="handleDelete" mode="transparent"
 			><i class="em em-wastebasket" aria-role="presentation" aria-label=""></i
 		></BaseButton>
 	</li>

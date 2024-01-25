@@ -40,4 +40,9 @@ button:active {
 .outline {
 	border: 2px solid var(--color-action-second);
 }
+
+.transparent {
+	background-color: transparent;
+	border: none;
+}
 </style>

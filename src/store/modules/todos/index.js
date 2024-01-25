@@ -10,32 +10,27 @@ export default {
 				{
 					id: 't1',
 					todo: 'Solve very difficult JS algorithm',
-					duration: '> 120 mins',
-					type: 'longDuration',
+					duration: 'long',
 				},
 				{
 					id: 't2',
 					todo: 'Reply to emails',
-					duration: '< 30 mins',
-					type: 'shortDuration',
+					duration: 'quick',
 				},
 				{
 					id: 't2',
 					todo: 'Read 30 pages of anything',
-					duration: '< 60 mins',
-					type: 'mediumDuration',
+					duration: 'medium',
 				},
 				{
 					id: 't2',
 					todo: 'Do groceries',
-					duration: '< 60 mins',
-					type: 'mediumDuration',
+					duration: 'medium',
 				},
 				{
 					id: 't2',
 					todo: 'Take a walk',
-					duration: '> 120 mins',
-					type: 'longDuration',
+					duration: 'long',
 				},
 			],
 		};

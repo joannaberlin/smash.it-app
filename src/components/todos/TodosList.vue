@@ -8,7 +8,7 @@
 					:key="todo.id"
 					:id="todo.id"
 					:todo="todo.todo"
-					:type="todo.type"
+					:duration="todo.duration"
 					:text="todo.duration"
 				></TodoItem>
 			</ul>

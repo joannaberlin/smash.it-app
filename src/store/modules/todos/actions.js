@@ -4,7 +4,6 @@ export default {
 			id: data.id,
 			todo: data.todo,
 			duration: data.duration,
-			type: data.type,
 		};
 
 		context.commit('addTodo', {

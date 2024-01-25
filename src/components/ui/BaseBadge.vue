@@ -1,10 +1,10 @@
 <template>
-	<span class="badge" :class="type">{{ text }}</span>
+	<span class="badge" :class="duration">{{ text }}</span>
 </template>
 
 <script>
 export default {
-	props: ['text', 'type'],
+	props: ['text', 'duration'],
 };
 </script>
 
@@ -19,17 +19,17 @@ export default {
 	font-weight: bold;
 }
 
-.shortDuration {
+.quick {
 	background-color: var(--color-badge-1);
 	border: 1px solid var(--color-badge-1);
 }
 
-.mediumDuration {
+.medium {
 	background-color: var(--color-badge-2);
 	border: 1px solid var(--color-badge-2);
 }
 
-.longDuration {
+.long {
 	background-color: var(--color-badge-3);
 	border: 1px solid var(--color-badge-3);
 }

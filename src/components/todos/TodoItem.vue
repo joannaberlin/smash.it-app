@@ -1,13 +1,13 @@
 <template>
 	<li>
 		<p><span>+</span>{{ todo }}</p>
-		<BaseBadge :type="type" :text="text"></BaseBadge>
+		<BaseBadge :duration="duration" :text="text"></BaseBadge>
 	</li>
 </template>
 
 <script>
 export default {
-	props: ['id', 'todo', 'type', 'text'],
+	props: ['id', 'todo', 'duration', 'text'],
 };
 </script>
 

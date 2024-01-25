@@ -9,7 +9,7 @@
 	.card {
 		width: 85vw;
 		min-height: 80vh;
-		max-height: 100vh;
+		min-height: 100vh;
 		border-radius: 30px;
 		padding: 0.6em;
 		box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);

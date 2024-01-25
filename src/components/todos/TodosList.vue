@@ -25,7 +25,6 @@ export default {
 	},
 	computed: {
 		todos() {
-			console.log(this.$store.getters['todos/todos']);
 			return this.$store.getters['todos/todos'];
 		},
 	},

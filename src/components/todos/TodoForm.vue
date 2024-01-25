@@ -9,7 +9,7 @@
 				type="radio"
 				id="shortDuration"
 				name="duration"
-				value="< 30 mins"
+				value="short"
 				v-model.trim="duration.val"
 			/>
 			<label for="shortDuration">&lt; 30 mins</label>
@@ -19,7 +19,7 @@
 				type="radio"
 				id="mediumDuration"
 				name="duration"
-				value="< 60 mins"
+				value="medium"
 				v-model.trim="duration.val"
 			/>
 			<label for="mediumDuration">&lt; 60 mins</label>
@@ -29,12 +29,15 @@
 				type="radio"
 				id="longDuration"
 				name="duration"
-				value="> 120 mins"
+				value="long"
 				v-model.trim="duration.val"
 			/>
 			<label for="longDuration">&gt; 120 mins</label>
 		</div>
 		<BaseButton mode="outline">Add Todo</BaseButton>
+		<Transition name="text"
+			><p v-if="isAdded">Your todo was added to the list!</p></Transition
+		>
 	</form>
 </template>
 
@@ -52,19 +55,19 @@ export default {
 			type: {
 				val: '',
 			},
+			isAdded: false,
 		};
 	},
 	methods: {
 		submitForm() {
-			console.log('submit btn');
 			const formData = {
 				id: Math.floor(Math.random() * 100),
 				todo: this.todo.val,
 				duration: this.duration.val,
 				type: this.duration.val,
 			};
-			console.log(formData);
 			this.$emit('save-data', formData);
+			this.isAdded = true;
 		},
 	},
 };
@@ -116,5 +119,28 @@ input[type='radio']:focus {
 
 input[type='radio']:checked {
 	accent-color: var(--color-action-second);
+}
+
+p {
+	margin-top: 1em;
+	text-align: center;
+}
+
+.text-enter-active {
+	animation: bounce-in 0.5s;
+}
+.text-leave-active {
+	animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+	0% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1.25);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 </style>

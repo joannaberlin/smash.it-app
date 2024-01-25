@@ -1,7 +1,7 @@
 <template>
 	<teleport to="body">
 		<div v-if="show" @click="tryClose" class="backdrop"></div>
-		<transition name="dialog">
+		<Transition name="dialog">
 			<dialog open v-if="show">
 				<header>
 					<slot name="header">
@@ -17,7 +17,7 @@
 					</slot>
 				</menu>
 			</dialog>
-		</transition>
+		</Transition>
 	</teleport>
 </template>
 
@@ -95,7 +95,7 @@ section {
 menu {
 	padding: 1rem;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	margin: 0;
 }
 

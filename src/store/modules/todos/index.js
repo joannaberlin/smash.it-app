@@ -18,17 +18,17 @@ export default {
 					duration: 'quick',
 				},
 				{
-					id: 't2',
+					id: 't3',
 					todo: 'Read 30 pages of anything',
 					duration: 'medium',
 				},
 				{
-					id: 't2',
+					id: 't4',
 					todo: 'Do groceries',
 					duration: 'medium',
 				},
 				{
-					id: 't2',
+					id: 't5',
 					todo: 'Take a walk',
 					duration: 'long',
 				},

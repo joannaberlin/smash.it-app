@@ -2,12 +2,22 @@
 	<li>
 		<p><span>+</span>{{ todo }}</p>
 		<BaseBadge :duration="duration" :text="text"></BaseBadge>
+		<BaseButton @click="handleDelete"
+			><i class="em em-wastebasket" aria-role="presentation" aria-label=""></i
+		></BaseButton>
 	</li>
 </template>
 
 <script>
 export default {
 	props: ['id', 'todo', 'duration', 'text'],
+	methods: {
+		handleDelete() {
+			const id = this.id;
+			console.log('id', id);
+			this.$store.dispatch('todos/deleteTodo', id);
+		},
+	},
 };
 </script>
 

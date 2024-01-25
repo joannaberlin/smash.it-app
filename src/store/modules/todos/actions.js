@@ -10,5 +10,7 @@ export default {
 			...todo,
 		});
 	},
-	removeTodo() {},
+	deleteTodo(context, id) {
+		context.commit('deleteTodo', id);
+	},
 };

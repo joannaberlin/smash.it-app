@@ -1,6 +1,11 @@
 # smash.it-app
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a todo app for Berliners.
+
+Features:
+
+- adding todo, removing todo, rendering todos' list as a widget
+- interactive widgets: showing current weather data for Berlin, Germany, and one showing random animal fact about animals
 
 ## Recommended IDE Setup
 

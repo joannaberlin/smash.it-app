@@ -2,15 +2,16 @@
 	<div class="todos_wrapper">
 		<div class="text_wrapper">
 			<h2><mark>Your ToDos</mark></h2>
-			<p v-if="noTodos">
-				Seems like you're done for today!<span
-					><i
-						class="em em-partying_face"
-						aria-role="presentation"
-						aria-label="FACE WITH PARTY HORN AND PARTY HAT"
-					></i
-				></span>
-			</p>
+			<Transition name="text"
+				><p v-if="noTodos">
+					Seems like you're done for today!<span
+						><i
+							class="em em-partying_face"
+							aria-role="presentation"
+							aria-label="FACE WITH PARTY HORN AND PARTY HAT"
+						></i
+					></span></p
+			></Transition>
 			<ul>
 				<TodoItem
 					v-for="todo in todos"
@@ -74,9 +75,32 @@ ul {
 p {
 	font-size: 1.1em;
 	margin-top: 1em;
+	text-align: center;
 }
 
 p i {
 	margin-left: 1em;
+}
+
+.text-enter-active {
+	animation: bounce-in 0.5s;
+}
+.text-leave-active {
+	animation: bounce-in 0.5s reverse;
+}
+
+@keyframes bounce-in {
+	0% {
+		transform: scale(0);
+	}
+	25% {
+		transform: scale(1.05);
+	}
+	50% {
+		transform: scale(1.25);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 </style>

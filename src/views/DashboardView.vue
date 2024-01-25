@@ -29,7 +29,7 @@
 					:icon="weatherData.icon"
 				/>
 			</div>
-			<div class="item item-4"><TodosList></TodosList></div>
+			<div class="item item-4"><TodosListWidget></TodosListWidget></div>
 		</main>
 	</BaseCardDesktop>
 </template>
@@ -39,7 +39,7 @@ import TheHeader from '@/components/layout/TheHeader.vue';
 import TemperatureWidget from '@/components/weather/TemperatureWidget.vue';
 import CloudsWidget from '@/components/weather/CloudsWidget.vue';
 import RandomQuestionWidget from '@/components/questions/RandomQuestionWidget.vue';
-import TodosList from '@/components/todos/TodosList.vue';
+import TodosListWidget from '@/components/todos/TodosListWidget.vue';
 import TodoForm from '@/components/todos/TodoForm.vue';
 
 export default {
@@ -54,7 +54,7 @@ export default {
 		TemperatureWidget,
 		CloudsWidget,
 		RandomQuestionWidget,
-		TodosList,
+		TodosListWidget,
 		TodoForm,
 	},
 	created() {

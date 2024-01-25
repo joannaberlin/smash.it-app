@@ -9,7 +9,7 @@
 				type="radio"
 				id="shortDuration"
 				name="duration"
-				value="short"
+				value="quick"
 				v-model.trim="duration.val"
 			/>
 			<label for="shortDuration">&lt; 30 mins</label>

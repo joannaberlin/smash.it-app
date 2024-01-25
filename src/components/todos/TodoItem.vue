@@ -14,7 +14,6 @@ export default {
 	methods: {
 		handleDelete() {
 			const id = this.id;
-			console.log('id', id);
 			this.$store.dispatch('todos/deleteTodo', id);
 		},
 	},

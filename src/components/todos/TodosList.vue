@@ -2,6 +2,15 @@
 	<div class="todos_wrapper">
 		<div class="text_wrapper">
 			<h2><mark>Your ToDos</mark></h2>
+			<p v-if="noTodos">
+				Seems like you're done for today!<span
+					><i
+						class="em em-partying_face"
+						aria-role="presentation"
+						aria-label="FACE WITH PARTY HORN AND PARTY HAT"
+					></i
+				></span>
+			</p>
 			<ul>
 				<TodoItem
 					v-for="todo in todos"
@@ -26,6 +35,11 @@ export default {
 	computed: {
 		todos() {
 			return this.$store.getters['todos/todos'];
+		},
+		noTodos() {
+			if (this.$store.getters['todos/todos'].length === 0) {
+				return true;
+			}
 		},
 	},
 };
@@ -55,5 +69,14 @@ ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+
+p {
+	font-size: 1.1em;
+	margin-top: 1em;
+}
+
+p i {
+	margin-left: 1em;
 }
 </style>

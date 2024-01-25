@@ -2,10 +2,9 @@
 	<BaseDialog :show="!!error" title="An error occured!" @close="handleError">
 		<p>{{ error }}</p>
 	</BaseDialog>
-	<BaseDialog :show="!isOpened" @close="handleForm">
+	<BaseDialog :show="!isOpened" title="Add Todo" @close="handleForm">
 		<section>
-			<p>Here will be my form</p>
-			<BaseButton>DUPA</BaseButton>
+			<TodoForm></TodoForm>
 		</section>
 	</BaseDialog>
 	<TheHeader @open="handleForm"></TheHeader>
@@ -41,6 +40,7 @@ import TemperatureWidget from '@/components/weather/TemperatureWidget.vue';
 import CloudsWidget from '@/components/weather/CloudsWidget.vue';
 import RandomQuestionWidget from '@/components/questions/RandomQuestionWidget.vue';
 import TodosList from '@/components/todos/TodosList.vue';
+import TodoForm from '@/components/todos/TodoForm.vue';
 
 export default {
 	data() {
@@ -55,6 +55,7 @@ export default {
 		CloudsWidget,
 		RandomQuestionWidget,
 		TodosList,
+		TodoForm,
 	},
 	created() {
 		this.loadWeatherData();

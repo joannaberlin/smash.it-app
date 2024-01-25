@@ -4,7 +4,7 @@
 	</BaseDialog>
 	<BaseDialog :show="!isOpened" title="Add Todo" @close="handleForm">
 		<section>
-			<TodoForm></TodoForm>
+			<TodoForm @save-data="saveData"></TodoForm>
 		</section>
 	</BaseDialog>
 	<TheHeader @open="handleForm"></TheHeader>
@@ -89,6 +89,9 @@ export default {
 		},
 		handleForm() {
 			this.isOpened = !this.isOpened;
+		},
+		saveData(data) {
+			this.$store.dispatch('todos/addTodo', data);
 		},
 	},
 };

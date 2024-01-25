@@ -2,7 +2,7 @@
 	<form @submit.prevent="submitForm">
 		<div class="form-control">
 			<label for="todo">Your Todo</label>
-			<textarea id="todo" rows="3"></textarea>
+			<textarea id="todo" rows="3" v-model.trim="todo.val"></textarea>
 		</div>
 		<div class="form-control">
 			<input
@@ -10,6 +10,7 @@
 				id="shortDuration"
 				name="duration"
 				value="< 30 mins"
+				v-model.trim="duration.val"
 			/>
 			<label for="shortDuration">&lt; 30 mins</label>
 		</div>
@@ -19,6 +20,7 @@
 				id="mediumDuration"
 				name="duration"
 				value="< 60 mins"
+				v-model.trim="duration.val"
 			/>
 			<label for="mediumDuration">&lt; 60 mins</label>
 		</div>
@@ -28,6 +30,7 @@
 				id="longDuration"
 				name="duration"
 				value="> 120 mins"
+				v-model.trim="duration.val"
 			/>
 			<label for="longDuration">&gt; 120 mins</label>
 		</div>
@@ -38,9 +41,30 @@
 <script>
 export default {
 	emits: ['save-data'],
+	data() {
+		return {
+			todo: {
+				val: '',
+			},
+			duration: {
+				val: '',
+			},
+			type: {
+				val: '',
+			},
+		};
+	},
 	methods: {
 		submitForm() {
-			this.$emit('save-data');
+			console.log('submit btn');
+			const formData = {
+				id: Math.floor(Math.random() * 100),
+				todo: this.todo.val,
+				duration: this.duration.val,
+				type: this.duration.val,
+			};
+			console.log(formData);
+			this.$emit('save-data', formData);
 		},
 	},
 };

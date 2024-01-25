@@ -110,7 +110,7 @@ nav {
 		justify-content: space-between;
 		align-items: end;
 		height: 95vh;
-		width: 15vw;
+		width: 14.5vw;
 		position: fixed;
 		top: 0;
 		left: 0;

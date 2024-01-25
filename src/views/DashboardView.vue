@@ -1,8 +1,14 @@
 <template>
 	<BaseDialog :show="!!error" title="An error occured!" @close="handleError">
-		<p>{{ error }}</p></BaseDialog
-	>
-	<TheHeader></TheHeader>
+		<p>{{ error }}</p>
+	</BaseDialog>
+	<BaseDialog :show="!isOpened" @close="handleForm">
+		<section>
+			<p>Here will be my form</p>
+			<BaseButton>DUPA</BaseButton>
+		</section>
+	</BaseDialog>
+	<TheHeader @open="handleForm"></TheHeader>
 	<BaseCardDesktop>
 		<main id="container">
 			<div class="item">
@@ -40,6 +46,7 @@ export default {
 	data() {
 		return {
 			error: null,
+			isOpened: true,
 		};
 	},
 	components: {
@@ -78,6 +85,9 @@ export default {
 		},
 		handleError() {
 			this.error = null;
+		},
+		handleForm() {
+			this.isOpened = !this.isOpened;
 		},
 	},
 };

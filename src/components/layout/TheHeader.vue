@@ -6,7 +6,9 @@
 		</h3>
 		<div class="date-btn_wrapper">
 			<BaseCurrentDate></BaseCurrentDate>
-			<BaseButton>New Todo <span class="btn-icon">+</span></BaseButton>
+			<BaseButton @click="openForm"
+				>New Todo <span class="btn-icon">+</span></BaseButton
+			>
 		</div>
 	</div>
 </template>
@@ -16,6 +18,11 @@ export default {
 	computed: {
 		userName() {
 			return this.$store.getters.userName;
+		},
+	},
+	methods: {
+		openForm() {
+			this.$emit('open');
 		},
 	},
 };
